@@ -27,40 +27,38 @@ The extension is not published in the Apple Store, but it is possible to get it 
 
 ## General Usage
 
-### Quick install (Chrome, straight from `src`, no build)
+### Quick install (Chrome, no build)
 
-1. Download the repo: click **Code → Download ZIP** at [github.com/adxy/prettylichess](https://github.com/adxy/prettylichess) and unzip it, or run:
-   ```
-   git clone https://github.com/adxy/prettylichess.git
-   ```
-2. Open `chrome://extensions` and turn on **Developer mode** (top right).
-3. Click **Load unpacked** and pick the `src` folder in the downloaded repo.
+1. Go to [github.com/adxy/prettylichess](https://github.com/adxy/prettylichess), click the green **Code** button, then **Download ZIP**.
+2. Find the downloaded ZIP file and unzip it (double-click it). You get a folder called `prettylichess-main`.
+3. In Chrome, type `chrome://extensions` in the address bar and press Enter.
+4. Turn on **Developer mode** (switch in the top right).
+5. Click **Load unpacked** (top left).
+6. Open the unzipped `prettylichess-main` folder, select the `src` folder inside it, and click **Select**.
 
-The theme works, but the settings pop-up (colour picker) needs the build below.
+Done! Open [lichess.org](https://lichess.org/) to see it. The settings pop-up (colour picker) needs the full install below.
 
 #### Copy for agent
 
-> Install the Prettier Lichess Chrome extension without building. Clone `https://github.com/adxy/prettylichess.git` (or download and unzip the ZIP from that repo). Open `chrome://extensions`, enable Developer mode, click "Load unpacked" and select the `src` folder (absolute path of the repo root + `/src`). Confirm "Prettier Lichess" appears and is enabled. Note the settings pop-up will not work from `src`.
+> Install the Prettier Lichess Chrome extension without building. Download `https://github.com/adxy/prettylichess/archive/refs/heads/main.zip` and unzip it. Open `chrome://extensions`, enable Developer mode, click "Load unpacked" and select the `src` folder inside the unzipped folder (absolute path). Confirm "Prettier Lichess" appears and is enabled. Note the settings pop-up will not work from `src`.
 
-### Full install (Chrome, built, with working pop-up)
+### Full install (Chrome, with working settings pop-up)
 
-1. Download the repo: click **Code → Download ZIP** at [github.com/adxy/prettylichess](https://github.com/adxy/prettylichess) and unzip it, or run:
-   ```
-   git clone https://github.com/adxy/prettylichess.git
-   ```
-2. Build it from inside the repo folder (needs [Node.js](https://nodejs.org/)):
+1. Download and unzip the repo (steps 1 and 2 above).
+2. Install [Node.js](https://nodejs.org/) if you don't have it.
+3. Open a terminal inside the unzipped `prettylichess-main` folder and run:
    ```
    npm install
    npm run build:chrome
    ```
-3. Open `chrome://extensions` and turn on **Developer mode** (top right).
-4. Click **Load unpacked** and pick the `dist-chrome` folder in the downloaded repo.
+4. In Chrome, go to `chrome://extensions` and turn on **Developer mode**.
+5. Click **Load unpacked**, select the new `dist-chrome` folder inside `prettylichess-main`, and click **Select**.
 
 To update after changes, run `npm run build:chrome` again and click the reload icon on the extension.
 
 #### Copy for agent (full install)
 
-> Install the Prettier Lichess Chrome extension. Clone `https://github.com/adxy/prettylichess.git` (or download and unzip the ZIP from that repo). In the repo root run `npm install` then `npm run build:chrome`. Then open `chrome://extensions`, enable Developer mode, click "Load unpacked" and select the `dist-chrome` folder (absolute path of the repo root + `/dist-chrome`). Confirm "Prettier Lichess" appears and is enabled.
+> Install the Prettier Lichess Chrome extension. Download `https://github.com/adxy/prettylichess/archive/refs/heads/main.zip` and unzip it. In the unzipped folder run `npm install` then `npm run build:chrome`. Then open `chrome://extensions`, enable Developer mode, click "Load unpacked" and select the `dist-chrome` folder (absolute path). Confirm "Prettier Lichess" appears and is enabled.
 
 Set Lichess to dark background to have the best compatibility with prettierlichess. \
 With the pop-up you can then customise the colours and choose themes. Have fun!
