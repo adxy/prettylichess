@@ -29,30 +29,38 @@ The extension is not published in the Apple Store, but it is possible to get it 
 
 ### Quick install (Chrome, straight from `src`, no build)
 
-1. Open `chrome://extensions` and turn on **Developer mode** (top right).
-2. Click **Load unpacked** and pick the `src` folder in this repo.
+1. Download the repo: click **Code → Download ZIP** at [github.com/adxy/prettylichess](https://github.com/adxy/prettylichess) and unzip it, or run:
+   ```
+   git clone https://github.com/adxy/prettylichess.git
+   ```
+2. Open `chrome://extensions` and turn on **Developer mode** (top right).
+3. Click **Load unpacked** and pick the `src` folder in the downloaded repo.
 
 The theme works, but the settings pop-up (colour picker) needs the build below.
 
 #### Copy for agent
 
-> Install the Prettier Lichess Chrome extension from this repo without building. Open `chrome://extensions`, enable Developer mode, click "Load unpacked" and select the `src` folder (absolute path of the repo root + `/src`). Confirm "Prettier Lichess" appears and is enabled. Note the settings pop-up will not work from `src`.
+> Install the Prettier Lichess Chrome extension without building. Clone `https://github.com/adxy/prettylichess.git` (or download and unzip the ZIP from that repo). Open `chrome://extensions`, enable Developer mode, click "Load unpacked" and select the `src` folder (absolute path of the repo root + `/src`). Confirm "Prettier Lichess" appears and is enabled. Note the settings pop-up will not work from `src`.
 
 ### Full install (Chrome, built, with working pop-up)
 
-1. Build it (needs [Node.js](https://nodejs.org/)):
+1. Download the repo: click **Code → Download ZIP** at [github.com/adxy/prettylichess](https://github.com/adxy/prettylichess) and unzip it, or run:
+   ```
+   git clone https://github.com/adxy/prettylichess.git
+   ```
+2. Build it from inside the repo folder (needs [Node.js](https://nodejs.org/)):
    ```
    npm install
    npm run build:chrome
    ```
-2. Open `chrome://extensions` and turn on **Developer mode** (top right).
-3. Click **Load unpacked** and pick the `dist-chrome` folder in this repo.
+3. Open `chrome://extensions` and turn on **Developer mode** (top right).
+4. Click **Load unpacked** and pick the `dist-chrome` folder in the downloaded repo.
 
 To update after changes, run `npm run build:chrome` again and click the reload icon on the extension.
 
 #### Copy for agent (full install)
 
-> Install the Prettier Lichess Chrome extension from this repo. In the repo root run `npm install` then `npm run build:chrome`. Then open `chrome://extensions`, enable Developer mode, click "Load unpacked" and select the `dist-chrome` folder (absolute path of the repo root + `/dist-chrome`). Confirm "Prettier Lichess" appears and is enabled.
+> Install the Prettier Lichess Chrome extension. Clone `https://github.com/adxy/prettylichess.git` (or download and unzip the ZIP from that repo). In the repo root run `npm install` then `npm run build:chrome`. Then open `chrome://extensions`, enable Developer mode, click "Load unpacked" and select the `dist-chrome` folder (absolute path of the repo root + `/dist-chrome`). Confirm "Prettier Lichess" appears and is enabled.
 
 Set Lichess to dark background to have the best compatibility with prettierlichess. \
 With the pop-up you can then customise the colours and choose themes. Have fun!
