@@ -30,6 +30,22 @@ The extension is not published in the Apple Store, but it is possible to get it 
 To install the extension, go to the official website for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/prettier-lichess) or [Chrome](https://chrome.google.com/webstore/detail/prettier-lichess/epgnobcgnmchnhgkgpedebbmhbblfcob). Set Lichess to dark background to have the best compatibility with prettierlichess. \
 With the pop-up you can then customise the colours and choose themes. Have fun!
 
+## Install manually (Chrome)
+
+1. Build it (needs [Node.js](https://nodejs.org/)):
+   ```
+   npm install
+   npm run build:chrome
+   ```
+2. Open `chrome://extensions` and turn on **Developer mode** (top right).
+3. Click **Load unpacked** and pick the `dist-chrome` folder in this repo.
+
+To update after changes, run `npm run build:chrome` again and click the reload icon on the extension.
+
+### Copy for agent
+
+> Install the Prettier Lichess Chrome extension from this repo. In the repo root run `npm install` then `npm run build:chrome`. Then open `chrome://extensions`, enable Developer mode, click "Load unpacked" and select the `dist-chrome` folder (absolute path of the repo root + `/dist-chrome`). Confirm "Prettier Lichess" appears and is enabled.
+
 ## Community Themes
 
 Check out the community driven theme library [here](https://github.com/algertc/prettierlichess-themes).
